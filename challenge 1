@@ -1,0 +1,49 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.9;
+
+contract SimpleStorage {
+    uint public number;
+    int public n2;
+    bool public b1;
+    address public addr;
+    constructor() {
+        number = 43;
+        n2 = 67;
+        b1 = true;
+        addr = address(0x4);
+    }
+    function setNumber(uint _number) public returns (uint) {
+        number = _number;
+        return number;
+    }
+    
+    function getNumber() public view returns (uint) {
+        return number;
+    }
+    function setN2(int _n2) public returns (int) {
+        n2 = _n2;
+        return n2;
+    }
+
+    function getN2() public view returns (int) {
+        return n2;
+    }
+
+    function setB1(bool _b1) public returns (bool) {
+        b1 = _b1;
+        return b1;
+    }
+
+    function getB1() public view returns (bool) {
+        return b1;
+    }
+
+    function setAddr(address _addr) public returns (address) {
+        addr = _addr;
+        return addr;
+    }
+
+    function getAddr() public view returns (address) {
+        return addr;
+    }
+}
