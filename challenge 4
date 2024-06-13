@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract LoopOperations {
+    function simpleOperation(uint a) public pure returns (uint) {
+        uint result = 0;
+        for (uint i = 0; i < 1000; i++) {
+            result += a;
+        }
+        return result;
+    }
+
+    function complexOperation(uint a, uint b) public pure returns (uint) {
+        uint result = 0;
+        for (uint i = 0; i < 100; i++) {
+            result += (a * b) / (a + 1);
+        }
+        return result;
+    }
+}
